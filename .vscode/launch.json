@@ -13,7 +13,7 @@
         {
             "preLaunchTask": "build",
             "type": "java",
-            "name": "CRac - Run",
+            "name": "CRaC - Run",
             "request": "launch",
             "projectName": "example-spring-boot",
             "vmArgs": ["-XX:CRaCCheckpointTo=/home/dennis/code/java/crac-store"],

@@ -10,13 +10,7 @@
       {
         "label": "Create Snapshot",
         "type": "shell",
-        "command": "pid=$(/home/dennis/jdk/zulu21.30.23-ca-crac-jdk21.0.1-linux_x64/bin/jps -lvm | grep 'spring' | awk '{print $1}') && /home/dennis/jdk/zulu21.30.23-ca-crac-jdk21.0.1-linux_x64/bin/jcmd $pid JDK.checkpoint",
-        "presentation": {
-          "reveal": "always",
-          "panel": "shared",
-          "focus": false
-        },
-        "problemMatcher": []
+        "command": "pid=$(/home/dennis/jdk/zulu21.30.23-ca-crac-jdk21.0.1-linux_x64/bin/jps -lvm | grep 'example-spring-boot' | awk '{print $1}') && /home/dennis/jdk/zulu21.30.23-ca-crac-jdk21.0.1-linux_x64/bin/jcmd example-spring-boot JDK.checkpoint"
       },
       {
         "label": "Restore Snapshot",
