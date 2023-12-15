@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "preLaunchTask": "build",
+            "type": "java",
+            "name": "CRac - Run",
+            "request": "launch",
+            "projectName": "example-spring-boot",
+            "vmArgs": ["-XX:CRaCCheckpointTo=/home/dennis/code/java/crac-store"],
+            "javaExec": "/home/dennis/jdk/zulu21.30.23-ca-crac-jdk21.0.1-linux_x64/bin/java",
+            "mainClass": "",
+            "args": ["-jar", "${workspaceFolder}/target/example-spring-boot-0.0.1-SNAPSHOT.jar"]
+        }
+    ]
+}

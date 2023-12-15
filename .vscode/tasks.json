@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "mvn package",
+        "problemMatcher": []
+      },
+      {
+        "label": "Create Snapshot",
+        "type": "shell",
+        "command": "pid=$(/home/dennis/jdk/zulu21.30.23-ca-crac-jdk21.0.1-linux_x64/bin/jps -lvm | grep 'spring' | awk '{print $1}') && /home/dennis/jdk/zulu21.30.23-ca-crac-jdk21.0.1-linux_x64/bin/jcmd $pid JDK.checkpoint",
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared",
+          "focus": false
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Restore Snapshot",
+        "type": "shell",
+        "command": "/home/dennis/jdk/zulu21.30.23-ca-crac-jdk21.0.1-linux_x64/bin/java -XX:CRaCRestoreFrom=/home/dennis/code/java/crac-store"
+      },
+    ]
+  }
